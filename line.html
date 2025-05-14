@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display LineString in MAPID Maps</title>
+    <meta
+      property="og:description"
+      content="Use extrusions to display buildings' height in 3D."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@5.1.0/dist/maplibre-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      const MAP_SERVICE_KEY = "67acaad1aeee190e01e20459";
+      const map = new maplibregl.Map({
+        style: `https://basemap.mapid.io/styles/street-new-generation/style.json?key=${MAP_SERVICE_KEY}`,
+        center: [110.36697543550902, -7.78295514598502],
+        zoom: 12,
+        pitch: 0,
+        bearing: 0,
+        container: "map",
+        canvasContextAttributes: { antialias: true },
+        attributionControl: true,
+      });
+
+      var geojsonLine = {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            geometry: {
+              type: "LineString",
+              coordinates: [
+                [110.36097440168157, -7.7827470870244895],
+                [110.3670344523789, -7.7827470870244895],
+                [110.36619496483746, -7.789505039791678],
+                [110.36824121572073, -7.789660991260433],
+              ],
+            },
+            properties: {
+              name: "Rute Contoh",
+            },
+          },
+        ],
+      };
+
+      map.on("load", function () {
+        // Tambahkan GeoJSON sebagai sumber data
+        map.addSource("line-source", {
+          type: "geojson",
+          data: geojsonLine,
+        });
+
+        // Tambahkan layer untuk menampilkan garis
+        map.addLayer({
+          id: "line-layer",
+          type: "line",
+          source: "line-source",
+          layout: {
+            "line-join": "round",
+            "line-cap": "round",
+          },
+          paint: {
+            "line-color": "#ff0000", // Warna merah
+            "line-width": 6, // Ketebalan garis
+          },
+        });
+
+        // Tambahkan layer untuk label(tulisan) di garis
+        map.addLayer({
+          id: "line-label-layer",
+          type: "symbol",
+          source: "line-source",
+          layout: {
+            "symbol-placement": "line",
+            "text-field": ["get", "name"],
+            "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+            "text-size": 16,
+          },
+          paint: {
+            "text-color": "#000", // Warna hitam
+            "text-halo-color": "#fff", // Warna putih
+            "text-halo-width": 1,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
