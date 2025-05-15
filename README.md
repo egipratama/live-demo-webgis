@@ -2,7 +2,7 @@
 
 Welcome to the **Live Web GIS** repository! This project provides example HTML files to demonstrate how to visualize geographic data using different types of geospatial features such as points, lines, and polygons on a map. These files utilize **MAPID Maps** as the basemap and **Maplibre GL JS** for rendering and interacting with the map.
 
-## Project Structure
+## 🗂 Project Structure
 
 This project contains the following example files:
 
@@ -11,13 +11,13 @@ This project contains the following example files:
 - [**`line.html`**](/line.html): Shows how to draw a polyline (e.g., a road or path) on the map.
 - [**`polygon.html`**](/polygon.html): Displays a polygon (e.g., an area or region) on the map.
 
-## Requirements
+## 📌 Requirements
 
 To view and run the example files, you'll need:
 - A modern web browser (e.g., Google Chrome, Firefox, or Edge).
 - An internet connection (for loading MAPID Maps tiles).
 
-## Installation
+## 🛠 Installation
 
 You can run the examples locally by following these steps:
 
@@ -29,7 +29,7 @@ You can run the examples locally by following these steps:
 4. **Modify the Code** – Feel free to change the code to suit your needs and see the live updates in the preview.
 5. **Happy Mapping! 🌍** – Enjoy customizing and experimenting with your Web GIS project!
 
-## Get API Key
+## 🔑 Get API Key
 Click [here](/APIKEY.md) to view the tutorial on how to get an API Key.
 
 ## 🌍 Style Basemap
