@@ -10,6 +10,7 @@ This project contains the following example files:
 - [**`src/point.html`**](src/point.html): Demonstrates how to add a point marker to the map.
 - [**`src/line.html`**](src/line.html): Shows how to draw a polyline (e.g., a road or path) on the map.
 - [**`src/polygon.html`**](src/polygon.html): Displays a polygon (e.g., an area or region) on the map.
+- [**`src/live_data_map.html`**](src/live_data_map.html): Shows how to load and display live JSON data from an API onto the map.
 
 ## 📌 Requirements
 
