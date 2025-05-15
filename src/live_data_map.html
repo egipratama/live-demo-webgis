@@ -40,8 +40,8 @@
 
       const url_jalur_krl =
         "https://geoserver.mapid.io/layers_new/get_layer?api_key=d331d922be454fb9967b250b9264bcf4&layer_id=68255ce5eed4e12933ac02b1&project_id=682556c9db74371d9d7e0f89";
-      const url_station_krl =
-        "https://geoserver.mapid.io/layers_new/get_layer?api_key=d331d922be454fb9967b250b9264bcf4&layer_id=68255d05d97257aefca7281b&project_id=682556c9db74371d9d7e0f89";
+      // const url_station_krl =
+      //   "https://geoserver.mapid.io/layers_new/get_layer?api_key=d331d922be454fb9967b250b9264bcf4&layer_id=68255d05d97257aefca7281b&project_id=682556c9db74371d9d7e0f89";
 
       map.on("load", async () => {
         console.log("map loaded");
@@ -84,41 +84,41 @@
           });
 
           // Fetch station KRL
-          const responsePoint = await fetch(url_station_krl);
-          const geojsonPoint = await responsePoint.json();
+          // const responsePoint = await fetch(url_station_krl);
+          // const geojsonPoint = await responsePoint.json();
 
-          map.addSource("point-source", {
-            type: "geojson",
-            data: geojsonPoint,
-          });
+          // map.addSource("point-source", {
+          //   type: "geojson",
+          //   data: geojsonPoint,
+          // });
 
-          map.addLayer({
-            id: "point-layer",
-            type: "circle",
-            source: "point-source",
-            paint: {
-              "circle-radius": 6,
-              "circle-color": "#ff0000",
-              "circle-stroke-width": 2, // Ketebalan border
-              "circle-stroke-color": "#ffffff", // Warna border (contoh: putih)
-            },
-          });
+          // map.addLayer({
+          //   id: "point-layer",
+          //   type: "circle",
+          //   source: "point-source",
+          //   paint: {
+          //     "circle-radius": 6,
+          //     "circle-color": "#ff0000",
+          //     "circle-stroke-width": 2, // Ketebalan border
+          //     "circle-stroke-color": "#ffffff", // Warna border (contoh: putih)
+          //   },
+          // });
 
-          map.addLayer({
-            id: "point-label-layer",
-            type: "symbol",
-            source: "point-source",
-            layout: {
-              "text-field": ["get", "NAMA STASIUN"], // ganti sesuai nama properti label kamu
-              "text-size": 12, // ukuran teks
-              "text-offset": [0, 1.5], // geser sedikit ke atas titik
-            },
-            paint: {
-              "text-color": "#000000", // warna teks
-              "text-halo-color": "#ffffff", // warna pinggiran teks
-              "text-halo-width": 1, // ketebalan pinggiran teks
-            },
-          });
+          // map.addLayer({
+          //   id: "point-label-layer",
+          //   type: "symbol",
+          //   source: "point-source",
+          //   layout: {
+          //     "text-field": ["get", "NAMA STASIUN"], // ganti sesuai nama properti label kamu
+          //     "text-size": 12, // ukuran teks
+          //     "text-offset": [0, 1.5], // geser sedikit ke atas titik
+          //   },
+          //   paint: {
+          //     "text-color": "#000000", // warna teks
+          //     "text-halo-color": "#ffffff", // warna pinggiran teks
+          //     "text-halo-width": 1, // ketebalan pinggiran teks
+          //   },
+          // });
         } catch (error) {
           console.error("Error loading GeoJSON:", error);
         }
