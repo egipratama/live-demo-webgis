@@ -6,10 +6,10 @@ Welcome to the **Live Web GIS** repository! This project provides example HTML f
 
 This project contains the following example files:
 
-- [**`map.html`**](/map.html): A basic map centered at a specific location with zoom controls.
-- [**`point.html`**](/point.html): Demonstrates how to add a point marker to the map.
-- [**`line.html`**](/line.html): Shows how to draw a polyline (e.g., a road or path) on the map.
-- [**`polygon.html`**](/polygon.html): Displays a polygon (e.g., an area or region) on the map.
+- [**`src/map.html`**](src/map.html): A basic map centered at a specific location with zoom controls.
+- [**`src/point.html`**](src/point.html): Demonstrates how to add a point marker to the map.
+- [**`src/line.html`**](src/line.html): Shows how to draw a polyline (e.g., a road or path) on the map.
+- [**`src/polygon.html`**](src/polygon.html): Displays a polygon (e.g., an area or region) on the map.
 
 ## 📌 Requirements
 
