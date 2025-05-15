@@ -28,3 +28,14 @@ You can run the examples locally by following these steps:
 3. **View in Preview** – See the result in the preview section of CodePen.
 4. **Modify the Code** – Feel free to change the code to suit your needs and see the live updates in the preview.
 5. **Happy Mapping! 🌍** – Enjoy customizing and experimenting with your Web GIS project!
+
+## Get API Key
+Klik [disini](/APIKEY.md) untuk melihat tutorial mendapatkan API Key
+
+## 🌍 Style Basemap
+Style default yang dapat peserta gunakan
+#### GL Style
+```shell
+https://basemap.mapid.io/styles/street-new-generation/style.json?key=${MAP_SERVICE_KEY}
+```
+Klik [disini](/MAPSTYLE.md) untuk melihat tutorial cara memilih map style lain.
