@@ -30,12 +30,12 @@ You can run the examples locally by following these steps:
 5. **Happy Mapping! 🌍** – Enjoy customizing and experimenting with your Web GIS project!
 
 ## Get API Key
-Klik [disini](/APIKEY.md) untuk melihat tutorial mendapatkan API Key
+Click [here](/APIKEY.md) to view the tutorial on how to get an API Key.
 
 ## 🌍 Style Basemap
-Style default yang dapat peserta gunakan
+Example Style Link
 #### GL Style
 ```shell
 https://basemap.mapid.io/styles/street-new-generation/style.json?key=${MAP_SERVICE_KEY}
 ```
-Klik [disini](/MAPSTYLE.md) untuk melihat tutorial cara memilih map style lain.
+Click [here](/MAPSTYLE.md) to view the tutorial on how to choose a different map style.
